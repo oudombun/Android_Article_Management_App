@@ -19,22 +19,22 @@ import retrofit2.http.Query;
 
 public interface ArticleService {
 
-    @GET("/v1/api/articles")
+    @GET("/api/articles")
     Call<ArticleResponse> getData(@Query("page") int page, @Query("limit") int limit);
 
-    @POST("/v1/api/articles")
+    @POST("/api/articles")
     Call<ArticleOneResponse> postData(@Body Article article);
 
     @Multipart
-    @POST("/v1/api/uploadfile/single")
+    @POST("/api/uploadfile/single")
     Call<ImageResponse> uploadImg(@Part MultipartBody.Part file);
 
-    @GET("/v1/api/articles/{id}")
+    @GET("/api/articles/{id}")
     Call<ArticleOneResponse> getDataById(@Path("id") int id);
 
-    @DELETE("/v1/api/articles/{id}")
+    @DELETE("/api/articles/{id}")
     Call<ArticleOneResponse> deleteData(@Path("id") int id);
 
-    @PUT("/v1/api/articles/{id}")
+    @PUT("/api/articles/{id}")
     Call<ArticleOneResponse> updateData(@Path("id") int id,@Body Article article);
 }

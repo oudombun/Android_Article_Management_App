@@ -16,7 +16,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
-    private static String BASE_URL = "http://110.74.194.124:15011";
+    private static String BASE_URL = "http://110.74.194.124:3034";
 
     private static String basic = "Basic %s";
     private static String authToken = "QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ=";
